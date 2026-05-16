@@ -1,6 +1,13 @@
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 import nextlogicLogo from "@/assets/nextlogic-logo.png";
+import { getImobiProHomeUrl } from "@/lib/imobipro";
 
 const NextLogicHeader = () => {
+  const handleBackToImobiPro = () => {
+    window.location.href = getImobiProHomeUrl();
+  };
+
   return (
     <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10 -z-10" />
@@ -20,6 +27,18 @@ const NextLogicHeader = () => {
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Desenvolvemos produtos inovadores que impulsionam negócios e simplificam processos com tecnologia de ponta
           </p>
+
+          <div className="flex justify-center">
+            <Button
+              variant="outline"
+              size="lg"
+              className="gap-2 px-8 py-6 text-base shadow-sm hover:shadow-md"
+              onClick={handleBackToImobiPro}
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Voltar para Home do iMobiPRO
+            </Button>
+          </div>
         </div>
       </div>
     </section>

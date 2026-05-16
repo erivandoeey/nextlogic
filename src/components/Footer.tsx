@@ -1,4 +1,5 @@
 import { Mail, Phone } from "lucide-react";
+import { getImobiProHomeUrl } from "@/lib/imobipro";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
@@ -35,6 +36,12 @@ const Footer = () => {
               </a>
               <a href="#contact" className="block text-muted-foreground hover:text-primary transition-colors">
                 Entre em contato
+              </a>
+              <a
+                href={getImobiProHomeUrl()}
+                className="block text-muted-foreground hover:text-primary transition-colors"
+              >
+                Voltar para o iMobiPRO
               </a>
             </div>
           </div>
